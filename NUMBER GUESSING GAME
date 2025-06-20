@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    int i, j;
+    srand(time(0));
+
+
+    i = rand() % 100 + 1;
+
+    printf("Enter a number between 1 and 100: ");
+    scanf("%d", &j);
+
+    if (j > 100 || j < 1) {
+        printf("Oops!! Wrong input. Please enter a number between 1 and 100.\n");
+    }
+    else if (j == i) {
+        printf("You guessed the correct number!\n");
+    }
+    else {
+        printf("Oops!! Wrong guess. The correct number was %d.\n", i);
+    }
+
+    return 0;
